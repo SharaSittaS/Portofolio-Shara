@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Web Portfolio Shara Sitta S.</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <h5>Web Portofolio.</h5>
+            </div>
+            <div class="links">
+                <div class="link"><a href="index.html">Home</a></div>
+                <div class="link"><a href="about.html">About</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        
+        <div class="dropdown"> 
+            <div class="links">
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+            </div>
+        </div>
+    </nav>
+        <section>
+            <div class="main-container">
+                <div class="image">
+                    <img src="assets/Self1 (1).png" alt="">
+                </div>
+                <div class="content">
+                    <div class="typewriter">Mahasiswa Informatika</div>
+                    <h1>Shara Sitta Safiruddin</h1>
+                    <h2>NPM: 2408107010067</h2>
+                    <p>Mahasiswa Informatika yang sedang mempelajari pengembangan website dan pembuatan tampilan web yang sederhana dan fungsional.</p>
+                    
+                    <div class="sosial-links">
+                        <a href="https://github.com/SharaSittaS"><i class="fa-brands fa-github"></i></a>
+                        <a href="#link_WA"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            function hamburg() {
+                const navbar = document.querySelector('.dropdown');
+                const hamburger = document.querySelector('.hamburg');
+                const cancelBtn = document.querySelector('.cancel');
+                navbar.style.transform = 'translateY(0px)';
+                hamburger.style.display = 'none';
+                cancelBtn.style.display = 'block';
+            }
+            function cancel() {
+                const navbar = document.querySelector('.dropdown');
+                navbar.style.transform = 'translateY(-500px)';
+                const cancelBtn = document.querySelector('.cancel');
+                cancelBtn.style.display = 'none';
+                const hamburger = document.querySelector('.hamburg');
+                hamburger.style.display = 'block';
+            }
+        </script>
+</body>
+</html>
